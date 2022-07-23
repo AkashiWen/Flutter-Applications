@@ -19,7 +19,9 @@ class DashboardScreen extends GetView<DashboardController> {
     return PersistentTabView(
       context,
       controller: controller.persistentTab,
+      // 主内容区域
       screens: _buildScreen(),
+      // 底部按钮
       items: _buildNavbarItems(),
       decoration: NavBarDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -42,7 +44,7 @@ class DashboardScreen extends GetView<DashboardController> {
   }
 
   List<Widget> _buildScreen() {
-    return [
+    return const [
       ExploreScreen(),
       Center(
         child: Text('test2'),
